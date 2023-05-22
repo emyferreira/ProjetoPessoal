@@ -1,0 +1,62 @@
+body {
+    background-color: #260016;
+}
+
+/* Começo da tela 1 do cadastro */
+#cadastroTela1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+}
+.fundoForm {
+    background-color: #E6DDBC;
+    width: 57vw;
+    height: 62vh;
+    border-radius: 17px;
+}
+.fundoForm h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+.camposCadastro1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2%;
+}
+input {
+    width: 15vw;
+}
+.form1 {
+    display: flex;
+    flex-direction: column;
+}
+.form2 {
+    display: flex;
+    flex-direction: column;
+}
+.botoesCadastro1 {
+    display: flex;
+    justify-content: space-around;
+}
+.botaoVoltar1 {
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    color: white;
+    border-radius: 40px;
+    background-color: #260016;
+}
+.botaoAvancar1 {
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    color: white;
+    border-radius: 40px;
+    background-color: #260016;
+}
+/* Fim da tela 1 do cadastro */
