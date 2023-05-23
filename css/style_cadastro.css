@@ -41,6 +41,10 @@ input {
     display: flex;
     justify-content: space-around;
 }
+.botoesCadastro1 a {
+    text-decoration: none;
+    color: white;
+}
 .botaoVoltar1 {
     font-size: 15px;
     width: 100px;
