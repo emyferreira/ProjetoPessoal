@@ -76,7 +76,7 @@ input {
 .fundoForm2 {
     background-color: #E6DDBC;
     width: 57vw;
-    height: 62vh;
+    height: 65vh;
     border-radius: 17px;
 }
 .fundoForm2 h3 {
@@ -86,11 +86,23 @@ input {
     text-align: center;
     font-size: 180%;
 }
+.fundoForm2 h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 1%;
+    text-align: center;
+    font-size: 150%;
+    padding: 0;
+}
 .camposCadastro2 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 2%;
+    padding: 1%;
+}
+.camposCadastro2 p {
+   font-size: 100%; 
 }
 input {
     width: 15vw;
@@ -99,10 +111,19 @@ input {
     display: flex;
     flex-direction: column;
 }
+.form3 span {
+    font-size: 140%;
+}
 .form4 {
     display: flex;
     flex-direction: column;
+    margin-top: 4%;
 }
+.checkBox {
+    width: 7vw;
+    height: 3vh;
+}
+
 .botoesCadastro2 {
     display: flex;
     justify-content: space-around;
@@ -130,3 +151,89 @@ input {
     background-color: #260016;
 }
 /* Fim da tela 2 do cadastro  */
+
+/* Começo da tela 3 do cadastro  */
+#cadastroTela3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+}
+.fundoForm3 {
+    background-color: #E6DDBC;
+    width: 57vw;
+    height: 65vh;
+    border-radius: 17px;
+}
+.fundoForm3 h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 180%;
+}
+.fundoForm3 h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 1%;
+    text-align: center;
+    font-size: 150%;
+    padding: 0;
+}
+.camposCadastro3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1%;
+}
+.camposCadastro3 p {
+   font-size: 100%; 
+}
+input {
+    width: 15vw;
+}
+.form3 {
+    display: flex;
+    flex-direction: column;
+}
+.form3 span {
+    font-size: 140%;
+}
+.form4 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+}
+.checkBox {
+    width: 7vw;
+    height: 3vh;
+}
+
+.botoesCadastro3 {
+    display: flex;
+    justify-content: space-around;
+}
+.botoesCadastro3 a {
+    text-decoration: none;
+    color: white;
+}
+.botaoVoltar3 {
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    color: white;
+    border-radius: 40px;
+    background-color: #260016;
+}
+.botaoAvancar3 {
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    color: white;
+    border-radius: 40px;
+    background-color: #260016;
+}
+/* Fim da tela 3 do cadastro  */
