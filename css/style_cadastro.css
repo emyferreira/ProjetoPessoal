@@ -29,6 +29,7 @@ body {
 }
 input {
     width: 15vw;
+    border: 1px solid #260016;
 }
 .form1 {
     display: flex;
@@ -41,6 +42,7 @@ input {
 .botoesCadastro1 {
     display: flex;
     justify-content: space-around;
+    margin-top: 2%;
 }
 .botoesCadastro1 a {
     text-decoration: none;
@@ -49,7 +51,7 @@ input {
 .botaoVoltar1 {
     font-size: 15px;
     width: 100px;
-    height: 30px;
+    height: 32px;
     border: 1px solid #e0e0e0;
     color: white;
     border-radius: 40px;
@@ -58,7 +60,7 @@ input {
 .botaoAvancar1 {
     font-size: 15px;
     width: 100px;
-    height: 30px;
+    height: 32px;
     border: 1px solid #e0e0e0;
     color: white;
     border-radius: 40px;
@@ -104,9 +106,6 @@ input {
 .camposCadastro2 p {
    font-size: 100%; 
 }
-input {
-    width: 15vw;
-}
 .form3 {
     display: flex;
     flex-direction: column;
@@ -135,7 +134,7 @@ input {
 .botaoVoltar2 {
     font-size: 15px;
     width: 100px;
-    height: 30px;
+    height: 32px;
     border: 1px solid #e0e0e0;
     color: white;
     border-radius: 40px;
@@ -144,7 +143,7 @@ input {
 .botaoAvancar2 {
     font-size: 15px;
     width: 100px;
-    height: 30px;
+    height: 32px;
     border: 1px solid #e0e0e0;
     color: white;
     border-radius: 40px;
@@ -170,7 +169,7 @@ input {
     justify-content: center;
     margin-bottom: 0;
     text-align: center;
-    font-size: 180%;
+    font-size: 120%;
 }
 .fundoForm3 h2 {
     display: flex;
@@ -185,13 +184,10 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 1%;
+    padding: 3%;
 }
 .camposCadastro3 p {
    font-size: 100%; 
-}
-input {
-    width: 15vw;
 }
 .form5 {
     display: flex;
@@ -229,14 +225,10 @@ input {
 .textArea {
     border: 1.5px solid #260016;
 }
-.checkBox {
-    width: 7vw;
-    height: 3vh;
-}
-
 .botoesCadastro3 {
     display: flex;
     justify-content: space-around;
+    margin-top: 3%;
 }
 .botoesCadastro3 a {
     text-decoration: none;
@@ -245,7 +237,7 @@ input {
 .botaoVoltar3 {
     font-size: 15px;
     width: 100px;
-    height: 30px;
+    height: 32px;
     border: 1px solid #e0e0e0;
     color: white;
     border-radius: 40px;
@@ -254,10 +246,58 @@ input {
 .botaoAvancar3 {
     font-size: 15px;
     width: 100px;
-    height: 30px;
+    height: 32px;
     border: 1px solid #e0e0e0;
     color: white;
     border-radius: 40px;
     background-color: #260016;
 }
 /* Fim da tela 3 do cadastro  */
+
+/* Começo da tela de login */
+.fundoFormLogin {
+    background-color: #E6DDBC;
+    width: 27vw;
+    height: 50vh;
+    border-radius: 17px;
+}
+.fundoFormLogin h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: center;
+}
+.camposLogin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2%;
+}
+.botoesLogin {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 7%;
+}
+.botoesLogin a {
+    text-decoration: none;
+    color: white;
+}
+.botaoVoltarLogin {
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #e0e0e0;
+    color: white;
+    border-radius: 40px;
+    background-color: #260016;
+}
+.botaoEntrarLogin {
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #e0e0e0;
+    color: white;
+    border-radius: 40px;
+    background-color: #260016;
+}
+/* Fim da tela de login */
