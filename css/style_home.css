@@ -99,7 +99,7 @@ header {
     margin-top: 12%;
     margin-left: 15%;
     width: 47%;
-} 
+}
 
 .ladoEsquerdoHome a {
     text-decoration: none;
@@ -262,6 +262,10 @@ header {
     flex-direction: row;
 }
 
+.titulosFaleConosco {
+    margin-left: 15%;
+}
+
 .faleConoscoGeral {
     width: 80%;
     padding: 5%;
@@ -269,7 +273,7 @@ header {
 
 .formFaleConosco {
     width: 45%;
-    border: 1.5px solid #260016;
+    border: 2px solid #260016;
     display: flex;
     margin-left: 47%;
     flex-direction: row;
@@ -284,5 +288,25 @@ header {
     padding: 2%;
 }
 
+input {
+    border: 1px solid #260016;
+}
+
+.botaoEnviarFaleConosco {
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #e0e0e0;
+    color: white;
+    border-radius: 40px;
+    background-color: #260016;
+}
 
 /* Fim da tela Fale Conosco */
+
+/* Começo footer */
+
+footer {
+    background-color: #260016;
+    height: 22vh;
+}
