@@ -247,11 +247,42 @@ header {
     border: 2px solid #260016;
 }
 
-
-
 .imgValores {
     width: 3vw;
     height: 9vh;
 }
 
 /* Fim tela Valores */
+
+/* Começo da tela Fale Conosco */
+
+.telaFaleConosco {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.faleConoscoGeral {
+    width: 80%;
+    padding: 5%;
+}
+
+.formFaleConosco {
+    width: 45%;
+    border: 1.5px solid #260016;
+    display: flex;
+    margin-left: 47%;
+    flex-direction: row;
+    padding: 2%;
+}
+
+.formFaleConosco1 {
+    padding: 2%;
+}
+
+.formFaleConosco2 {
+    padding: 2%;
+}
+
+
+/* Fim da tela Fale Conosco */
