@@ -42,7 +42,6 @@ input {
 .botoesCadastro1 {
     display: flex;
     justify-content: space-around;
-    margin-top: 2%;
 }
 .botoesCadastro1 a {
     text-decoration: none;
@@ -101,7 +100,6 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 1%;
 }
 .camposCadastro2 p {
    font-size: 100%; 
@@ -228,7 +226,6 @@ input {
 .botoesCadastro3 {
     display: flex;
     justify-content: space-around;
-    margin-top: 3%;
 }
 .botoesCadastro3 a {
     text-decoration: none;
