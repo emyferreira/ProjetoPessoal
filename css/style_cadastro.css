@@ -193,17 +193,41 @@ input {
 input {
     width: 15vw;
 }
-.form3 {
+.form5 {
     display: flex;
     flex-direction: column;
 }
-.form3 span {
+.form5 span {
     font-size: 140%;
 }
-.form4 {
+.caracterePerfil {
+    background-color: black;
+    border: 1px solid black;
+    width: 4vw;
+    height: 8vh;
+    border-radius: 100%;
+}
+.fotoPerfil {
+    display: flex;
+    flex-direction: column;
+}
+.linhaCaractere {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15%;
+}
+.bioPronome {
+    display: flex;
+    flex-direction: column;
+}
+.form6 {
     display: flex;
     flex-direction: column;
     margin-top: 4%;
+}
+.textArea {
+    border: 1.5px solid #260016;
 }
 .checkBox {
     width: 7vw;
