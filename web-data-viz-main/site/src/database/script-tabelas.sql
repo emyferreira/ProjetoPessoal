@@ -26,13 +26,21 @@ CREATE TABLE Perfil (
     FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario)
 ) AUTO_INCREMENT = 100;
 
+CREATE TABLE Dashboard (
+    idDashboard INT PRIMARY KEY AUTO_INCREMENT,
+    favoritos INT,
+    curtidos INT,
+    fkUsuario INT,
+    FOREIGN KEY (fkUsuario) REFERENCES Usuário(idUsuario)
+) AUTO_INCREMENT = 1000;
+
 CREATE TABLE Registro (
 	idRegistro INT PRIMARY KEY AUTO_INCREMENT,
     imgRegistro VARCHAR(50),
     legenda VARCHAR(35),
     fkPerfil INT,
     FOREIGN KEY (fkPerfil) REFERENCES Perfil(idPerfil)
-) AUTO_INCREMENT = 1000;
+) AUTO_INCREMENT = 10000;
 
 /*
 comandos para criar usuário em banco de dados azure, sqlserver,
