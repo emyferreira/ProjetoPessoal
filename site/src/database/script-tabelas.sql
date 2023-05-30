@@ -13,14 +13,15 @@ USE RainbowEye;
 CREATE TABLE Usuário (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45),
+    email VARCHAR(50),
     username VARCHAR(15),
     senha VARCHAR(30),
     biografia VARCHAR(50)
 );
 
-CREATE TABLE Perfil (
+CREATE TABLE Nicho (
 	idPerfil INT PRIMARY KEY AUTO_INCREMENT,
-    email VARCHAR(40),
+    nichoFavorito VARCHAR(40),
     fkUsuario INT,
     FOREIGN KEY (fkUsuario) REFERENCES Usuário(idUsuario)
 ) AUTO_INCREMENT = 100;
