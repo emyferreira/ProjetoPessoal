@@ -38,8 +38,8 @@ CREATE TABLE Registro (
 	idRegistro INT PRIMARY KEY AUTO_INCREMENT,
     imgRegistro VARCHAR(50),
     legenda VARCHAR(35),
-    fkPerfil INT,
-    FOREIGN KEY (fkPerfil) REFERENCES Perfil(idPerfil)
+    fkUsuario INT,
+    FOREIGN KEY (fkUsuario) REFERENCES Usuário(idUsuario)
 ) AUTO_INCREMENT = 10000;
 
 /*

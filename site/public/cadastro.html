@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="botoesCadastro1">
-                <button class="botaoVoltar1"> <a href="home.html">Voltar</a></button>
+                <button class="botaoVoltar1"> <a href="index.html">Voltar</a></button>
                 <button class="botaoAvancar1">Avançar</button>
             </div>
         </div>
@@ -97,7 +97,7 @@
             </div>
             <div class="botoesCadastro3">
                 <button class="botaoVoltar3">Voltar</button>
-                <button class="botaoAvancar3" onclick="cadastrar()""><a href="login.html">Cadastrar</a></button>
+                <button class="botaoAvancar3" onclick="cadastrar()"><a href="login.html">Cadastrar</a></button>
             </div>
             <div id="div_aguardar" class="loading-div">
                 <img src="./assets/circle-loading.gif" id="loading-gif">
@@ -123,8 +123,9 @@
         var userVar = user_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var biografiaVar = biografia_input.value;
 
-        if (nomeVar == "" || emailVar == "" || userVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || userVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || biografiaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -147,7 +148,8 @@
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 userServer: userVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                biografiaServer: biografiaVar
             })
         }).then(function (resposta) {
 

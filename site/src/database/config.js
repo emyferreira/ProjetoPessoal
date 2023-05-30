@@ -19,10 +19,10 @@ var mysql = require("mysql2");
 
 // CONEXÃO DO MYSQL WORKBENCH
 var mySqlConfig = {
-    host: "SEU_SERVIDOR",
+    host: "127.0.0.1:3306",
     database: "RainbowEye",
-    user: "SEU_USUARIO",
-    password: "SUA_SENHA",
+    user: "aluno",
+    password: "sptech",
 };
 
 function executar(instrucao) {
