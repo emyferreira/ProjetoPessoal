@@ -12,8 +12,8 @@ USE RainbowEye;
 
 CREATE TABLE Usuário (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
-    nomeCompleto VARCHAR(45),
-    nomeUser VARCHAR(15),
+    nome VARCHAR(45),
+    username VARCHAR(15),
     senha VARCHAR(30),
     biografia VARCHAR(50)
 );
@@ -21,9 +21,8 @@ CREATE TABLE Usuário (
 CREATE TABLE Perfil (
 	idPerfil INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(40),
-    telCelular CHAR(11),
     fkUsuario INT,
-    FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario)
+    FOREIGN KEY (fkUsuario) REFERENCES Usuário(idUsuario)
 ) AUTO_INCREMENT = 100;
 
 CREATE TABLE Dashboard (
