@@ -74,3 +74,15 @@ body {
     color: white;
     justify-content: space-around;
 }
+
+.fotos {
+    width: 100vw;
+    height: 65vh;
+}
+
+.caixaFotos {
+    border: 1px solid #260016;
+    width: 98%;
+    height: 100%;
+    margin: 1% 1% 1% 1%;
+}
