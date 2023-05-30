@@ -220,16 +220,19 @@ header {
 .telaValores {
     display: flex;
     flex-direction: row;
+    margin-top: 4%;
 }
 
 .tituloECaixas {
     display: flex;
     flex-direction: column;
+    margin-left: 5%;
 }
 
 .caixas {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row;   
 }
 
 .telaValores h1 b {
@@ -240,16 +243,19 @@ header {
 }
 
 .caixaValor {
-    width: 12vw;
-    height: 50vh;
+    width: 22vw;
+    height: 47vh;
     display: flex;
+    text-align: center;
     flex-direction: column;
     border: 2px solid #260016;
+    margin: 5%;
 }
 
 .imgValores {
     width: 3vw;
     height: 9vh;
+    margin-left:38%;
 }
 
 /* Fim tela Valores */
