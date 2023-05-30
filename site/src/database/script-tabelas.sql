@@ -20,7 +20,7 @@ CREATE TABLE Usuário (
 );
 
 CREATE TABLE Nicho (
-	idPerfil INT PRIMARY KEY AUTO_INCREMENT,
+	idNicho INT PRIMARY KEY AUTO_INCREMENT,
     nichoFavorito VARCHAR(40),
     fkUsuario INT,
     FOREIGN KEY (fkUsuario) REFERENCES Usuário(idUsuario)
