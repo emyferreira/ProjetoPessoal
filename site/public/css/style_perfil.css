@@ -4,10 +4,10 @@ body {
     margin: 0;
 }
 
+tela 1
 .perfil1 {
     width: 100%;
     height: 100%;
-    position: fixed;
 }
 
 .parteCimaPerfil {
@@ -76,6 +76,11 @@ body {
     justify-content: space-around;
 }
 
+.textosSection a {
+    text-decoration: none;
+    color: white;
+}
+
 .fotos {
     width: 100vw;
     height: 65vh;
@@ -87,3 +92,188 @@ body {
     height: 100%;
     margin: 1% 1% 1% 1%;
 }
+tela 1 fim
+
+tela 2
+
+.perfil2 {
+    width: 100%;
+    height: 100%;
+}
+
+.parteCimaPerfil2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.logoPequena2 {
+    width: 3vw;
+    height: 10vh;
+    display: flex;
+    margin-left: 1700%;
+    margin-top: 70%;
+}
+
+.informPerfil2 {
+    width: 23%;
+    height: 17%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.inform3 {
+    display: flex;
+
+}
+
+.inform4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.inform4 p {
+    margin: 0 0 0 0 ;
+    display: flex;
+    justify-content: center;
+}
+
+
+.imgPerfil2 {
+    width: 5vw;
+    height: 11.5vh;
+    border-radius: 100%;
+}
+
+.sectionPerfil2 {
+    width: 100%;
+    height: 8vh;
+    background-color: #260016;
+    margin-top: 3%;
+}
+
+.reta2 {
+    border-left: 2px solid white;
+    height: 20px;
+    margin-top: 20px;
+}
+
+.textosSection2 {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+}
+
+.textosSection2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.fotos2 {
+    width: 100vw;
+    height: 65vh;
+}
+
+.caixaFotos2 {
+    border: 1px solid #260016;
+    width: 98%;
+    height: 100%;
+    margin: 1% 1% 1% 1%;
+}
+
+tela 2 fim 
+
+tela 3
+
+.perfil3 {
+    width: 100%;
+    height: 100%;
+}
+
+.parteCimaPerfil3 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.logoPequena3 {
+    width: 3vw;
+    height: 10vh;
+    display: flex;
+    margin-left: 1700%;
+    margin-top: 70%;
+}
+
+.informPerfil3 {
+    width: 23%;
+    height: 17%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.inform5 {
+    display: flex;
+
+}
+
+.inform6 {
+    display: flex;
+    flex-direction: column;
+}
+
+.inform6 p {
+    margin: 0 0 0 0 ;
+    display: flex;
+    justify-content: center;
+}
+
+
+.imgPerfil3 {
+    width: 5vw;
+    height: 11.5vh;
+    border-radius: 100%;
+}
+
+.sectionPerfil3 {
+    width: 100%;
+    height: 8vh;
+    background-color: #260016;
+    margin-top: 3%;
+}
+
+.reta3 {
+    border-left: 2px solid white;
+    height: 20px;
+    margin-top: 20px;
+}
+
+.textosSection3 {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+}
+
+.textosSection3 a {
+    text-decoration: none;
+    color: white;
+}
+
+.fotos3 {
+    width: 100vw;
+    height: 65vh;
+}
+
+.caixaRegistrosUsuario {
+    border: 1px solid #260016;
+    width: 98%;
+    height: 300%;
+    margin: 1% 1% 1% 1%;
+}
+
+tela 3 fim 
