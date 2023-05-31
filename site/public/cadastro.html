@@ -70,6 +70,11 @@
 
     <!-- Começo da tela 3 do cadastro -->
     <div id="cadastroTela3" style="display: none;">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
         <div class="fundoForm3">
             <div class="camposCadastro3">
                 <div class="fotoPerfil">
@@ -102,7 +107,7 @@
             </div>
             <div class="botoesCadastro3">
                 <button class="botaoVoltar3">Voltar</button>
-                <button class="botaoAvancar3" onclick="cadastrar()"><a href="login.html">Cadastrar</a></button>
+                <button class="botaoAvancar3" onclick="cadastrar()">Cadastrar</button>
             </div>
             <div id="div_aguardar" class="loading-div">
                 <img src="./assets/circle-loading.gif" id="loading-gif">
@@ -174,7 +179,7 @@
             if (resposta.ok) {
                 cardErro.style.display = "block";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                mensagem_erro.innerHTML = "Cadastro realizado! Entre fazendo o Login...";
 
                 setTimeout(() => {
                     window.location = "login.html";
