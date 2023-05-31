@@ -3,6 +3,11 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 /* Começo do header */
 header {
     background-color: #260016;
@@ -259,55 +264,51 @@ header {
 
 /* Fim tela Valores */
 
-/* Começo da tela Fale Conosco */
+/* Começo da tela Gráfico */
 
-.telaFaleConosco {
+.telaGrafico {
     margin-top: 10%;
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: 100%;
 }
 
-.titulosFaleConosco {
-    margin-left: 15%;
+.telaGrafico h1 {
+    margin-left: 7%;
 }
 
-.faleConoscoGeral {
-    width: 80%;
-    padding: 5%;
-}
 
-.formFaleConosco {
-    width: 45%;
-    border: 2px solid #260016;
+.textoBotaoGrafico {
     display: flex;
-    margin-left: 47%;
-    flex-direction: row;
-    padding: 2%;
+    flex-direction: column;
+    margin-top: 8%;
 }
 
-.formFaleConosco1 {
-    padding: 2%;
-}
-
-.formFaleConosco2 {
-    padding: 2%;
-}
-
-input {
-    border: 1px solid #260016;
-}
-
-.botaoEnviarFaleConosco {
+.botaoCadastrarGrafico {
     font-size: 15px;
-    width: 100px;
-    height: 35px;
+    width: 12vw;
+    height: 8vh;
     border: 1px solid #e0e0e0;
     color: white;
     border-radius: 40px;
     background-color: #260016;
+    margin-left: 7%;
 }
 
-/* Fim da tela Fale Conosco */
+.graficoEstatico {
+    width: 45vw;
+    height: 40vh;
+    margin-right: 4%;
+    margin-top: 8%;
+}
+
+.imgPlantaGrafico {
+    width: 11vw;
+    height: 28vh;
+}
+
+/* Fim da tela Gráfico */
 
 /* Começo footer */
 
@@ -315,3 +316,5 @@ footer {
     background-color: #260016;
     height: 22vh;
 }
+
+/* Fim footer */

@@ -11,6 +11,7 @@
   <script src="./js/funcoes.js"></script>
   <link rel="icon" href="./assets/icon/img_icone.ico">
   <link rel="stylesheet" href="./css/style_home.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -110,28 +111,16 @@
   <!-- Fim da tela Valores -->
 
   <!-- Começo da tela Fale Conosco -->
-  <div class="telaFaleConosco">
-    <div class="faleConoscoGeral">
-      <h1 class="titulosFaleConosco">FALE CONOSCO</h1>
-      <h3 class="titulosFaleConosco">Alguma dúvida, sugestão, opinião?</h3>
-      <h3 class="titulosFaleConosco">Entre em contato com a Rainbow!</h3>
-      <div class="formFaleConosco">
-        <div class="formFaleConosco1">
-          <p>Nome Completo</p>
-          <input type="text">
-          <p>E-mail</p>
-          <input type="text">
-          <p>Telefone Celular</p>
-          <input type="text">
-        </div>
-        <div class="formFaleConosco2">
-          <p>Assunto</p>
-          <textarea name="" id="" cols="30" rows="9"></textarea>
-          <button class="botaoEnviarFaleConosco">Enviar</button>
-        </div>
-      </div>
+  <div class="telaGrafico">
+    <div class="textoBotaoGrafico">
+      <h1>Receba gráficos como este mostrando sua interação nos posts!</h1>
+      <button class="botaoCadastrarGrafico"> <a href="cadastro.html">Fazer Cadastro</a> </button>
     </div>
-    <img class="imgPlantaValores" src="assets/img/ramo_bege_faleconosco.png" alt="decorarPlanta">
+    <div class="graficoEstatico">
+      <canvas id="myChart"></canvas>
+    </div>
+      <img class="imgPlantaGrafico" src="assets/img/ramo_bege_faleconosco.png" alt="decorarPlanta">
+  </div>
 
   </div>
   <!-- Fim da tela Fale Conosco -->
@@ -145,3 +134,29 @@
 </body>
 
 </html>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Curtidos', 'Favoritados'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19],
+                borderWidth: 1,
+                backgroundColor: [
+                'rgba(38, 0, 22, 1)'
+                ],
+                borderColor: [
+                'rgba(38, 0, 22, 1)'
+                ],
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+        }
+
+    });
+</script>
