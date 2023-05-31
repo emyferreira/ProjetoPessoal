@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/style_perfil.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="perfil2">
+        <div class="parteCimaPerfil2">
+
+            <div class="informPerfil2">
+                <div class="inform3">
+                    <div><img class="imgPerfil2" src="assets/img/flores3.jpeg" alt=""></div>
+                    <div class="inform4">
+                        <p>username</p>
+                        <p>she/her</p>
+                    </div>
+                </div>
+                <div class="biografia">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+
+            <div><img class="logoPequena2" src="assets/img/ramo_bege.png" alt=""></div>
+        </div>
+
+        <div class="sectionPerfil2">
+            <div class="textosSection2">
+                <p> <a href="perfil.html">RECOMENDAÇÕES</a> </p>
+                <div class="reta2"></div>
+                <b>
+                    <p>FAVORITOS</p>
+                </b>
+                <div class="reta2"></div>
+                <p> <a href="perfil_registros.html">SEUS REGISTROS</a> </p>
+            </div>
+        </div>
+
+        <div class="fotos2">
+            <div class="caixaFotos2">
+                <div>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Curtidos', 'Favoritados'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19],
+                borderWidth: 1,
+                backgroundColor: [
+                'rgba(38, 0, 22, 1)'
+                ],
+                borderColor: [
+                'rgba(38, 0, 22, 1)'
+                ],
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+        }
+
+    });
+</script>
