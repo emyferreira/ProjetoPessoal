@@ -53,11 +53,11 @@
                 <div class="form3">
                     <span><b>Selecione os campos nos quais</b></span>
                     <span><b>você se identifica:</b></span>
-                    <p>Animais<input class="checkBox" type="checkbox"></p>
-                    <p>Paisagem<input class="checkBox" type="checkbox"></p>
+                    <p>Animais<input id="checkBoxAnimais" class="checkBox" type="checkbox"></p>
+                    <p>Paisagem<input id="checkBoxPaisagem" class="checkBox" type="checkbox"></p>
                 </div>
                 <div class="form4">
-                    <p>Flores<input class="checkBox" type="checkbox"></p>
+                    <p>Flores<input id="checkBoxFlores" class="checkBox" type="checkbox"></p>
                 </div>
             </div>
             <div class="botoesCadastro2">
@@ -130,6 +130,33 @@
     }
 
     function avancar2() {
+        const checkbox = document.getElementById("checkBoxAnimais");
+        const isChecked = checkbox.checked;
+        if (isChecked) {
+            // o checkbox está marcado
+            alert('Animais Selecionado')
+        } else {
+            // o checkbox não está marcado
+            const checkbox = document.getElementById("checkBoxPaisagem");
+            const isChecked = checkbox.checked;
+            if (isChecked) {
+                // o checkbox está marcado
+                alert('Paisagem Selecionado')
+            } else {
+                // o checkbox não está marcado
+                const checkbox = document.getElementById("checkBoxFlores");
+                const isChecked = checkbox.checked;
+                if (isChecked) {
+                    // o checkbox está marcado
+                    alert('Flores Selecionado')
+                } else {
+                    // o checkbox não está marcado
+                }
+            }
+        }
+
+
+
         cadastroTela2.style.display = 'none';
         cadastroTela3.style.display = 'block';
     }
