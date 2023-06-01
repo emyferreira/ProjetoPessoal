@@ -34,14 +34,14 @@
                 </div>
                 <div class="form2">
                     <p>Senha</p>
-                    <input id="senha_input">
+                    <input type="password" id="senha_input">
                     <p>Confirmação de Senha</p>
-                    <input id="confirmacao_senha_input">
+                    <input type="password" id="confirmacao_senha_input">
                 </div>
             </div>
             <div class="botoesCadastro1">
                 <button class="botaoVoltar1"> <a href="index.html">Voltar</a></button>
-                <button class="botaoAvancar1" onclick="avancar1()">Avançar</button>
+                <button class="botaoAvancar1" onclick="avancar()">Avançar</button>
             </div>
         </div>
     </div>
@@ -49,30 +49,6 @@
 
     <!-- Começo da tela 2 do cadastro -->
     <div id="cadastroTela2" style="display: none;">
-        <div class="fundoForm2">
-            <h3>RECEBA INSPIRAÇÕES SELECIONADAS</h3>
-            <h2>PARA VOCÊ!</h2>
-            <div class="camposCadastro2">
-                <div class="form3">
-                    <span><b>Selecione a opção na qual</b></span>
-                    <span><b>você mais se identifica:</b></span>
-                    <p>Animais<input id="checkBoxAnimais" class="checkBox" type="checkbox"></p>
-                    <p>Paisagem<input id="checkBoxPaisagem" class="checkBox" type="checkbox"></p>
-                </div>
-                <div class="form4">
-                    <p>Flores<input id="checkBoxFlores" class="checkBox" type="checkbox"></p>
-                </div>
-            </div>
-            <div class="botoesCadastro2">
-                <button class="botaoVoltar2">Voltar</button>
-                <button class="botaoAvancar2" onclick="avancar2()">Avançar</button>
-            </div>
-        </div>
-    </div>
-    <!-- Fim da tela 2 do cadastro -->
-
-    <!-- Começo da tela 3 do cadastro -->
-    <div id="cadastroTela3" style="display: none;">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
                 <span id="mensagem_erro"></span>
@@ -81,19 +57,13 @@
         <div class="fundoForm3">
             <div class="camposCadastro3">
                 <div class="fotoPerfil">
-                    <h3>ESCOLHA SEU CARACTERE</h3>
-                    <div class="form5">
-                        <div class="linhaCaractere">
-                            <div class="caracterePerfil"></div>
-                            <div class="caracterePerfil"></div>
-                            <div class="caracterePerfil"></div>
-                        </div>
-                        <div class="linhaCaractere">
-                            <div class="caracterePerfil"></div>
-                            <div class="caracterePerfil"></div>
-                            <div class="caracterePerfil"></div>
-                        </div>
-                    </div>
+                    <h3>RECEBA INSPIRAÇÕES SELECIONADAS</h3>
+                    <h2>PARA VOCÊ!</h2>
+                    <span><b>Selecione a opção na qual</b></span>
+                    <span><b>você mais se identifica:</b></span>
+                    <p>Animais<input id="checkBoxAnimais" class="checkBox" type="checkbox"></p>
+                    <p>Paisagem<input id="checkBoxPaisagem" class="checkBox" type="checkbox"></p>
+                    <p>Flores<input id="checkBoxFlores" class="checkBox" type="checkbox"></p>
                 </div>
                 <div class="bioPronome">
                     <h3>ADCIONE UMA BIOGRAFIA</h3>
@@ -101,9 +71,10 @@
                         <textarea class="textArea" rows="9" cols="35" maxlength="500" id="biografia_input"></textarea>
                         <h3>PRONOMES</h3>
                         <select name="" id="">
-                            <option value="">she/ her</option>
-                            <option value="">he/ him</option>
-                            <option value="">they/ them</option>
+                            <option value="">ela / dela</option>
+                            <option value="">ele / dele</option>
+                            <option value="">elu / delu</option>
+                            <option value="">outros</option>
                         </select>
                     </div>
                 </div>
@@ -119,117 +90,11 @@
             <div id="div_erros_login"></div>
         </div>
     </div>
-    <!-- Fim da tela 3 do cadastro -->
+    <!-- Fim da tela 2 do cadastro -->
 
 </body>
 
 </html>
 
-<script>
-
-    function avancar1() {
-        cadastroTela1.style.display = 'none';
-        cadastroTela2.style.display = 'block';
-    }
-
-    function avancar2() {
-        const checkbox = document.getElementById("checkBoxAnimais");
-        const isChecked = checkbox.checked;
-        if (isChecked) {
-            // o checkbox está marcado
-            cadastroTela2.style.display = 'none';
-            cadastroTela3.style.display = 'block';
-        } else {
-            // o checkbox não está marcado
-            const checkbox = document.getElementById("checkBoxPaisagem");
-            const isChecked = checkbox.checked;
-            if (isChecked) {
-                // o checkbox está marcado
-                cadastroTela2.style.display = 'none';
-                cadastroTela3.style.display = 'block';
-            } else {
-                // o checkbox não está marcado
-                const checkbox = document.getElementById("checkBoxFlores");
-                const isChecked = checkbox.checked;
-                if (isChecked) {
-                    // o checkbox está marcado
-                    cadastroTela2.style.display = 'none';
-                    cadastroTela3.style.display = 'block';
-                } else {
-                    alert('É obrigatório selecionar um campo!')
-
-                }
-            }
-        }
-
-    }
-
-    function cadastrar() {
-        aguardar();
-
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
-        var nomeVar = nome_input.value;
-        var emailVar = email_input.value;
-        var userVar = user_input.value;
-        var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
-        var biografiaVar = biografia_input.value;
-
-        if (nomeVar == "" || emailVar == "" || userVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
-            finalizarAguardar();
-            return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-
-        // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                emailServer: emailVar,
-                userServer: userVar,
-                senhaServer: senhaVar,
-                biografiaServer: biografiaVar
-            })
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado! Entre fazendo o Login...";
-
-                setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000")
-
-                limparFormulario();
-                finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
-
-        return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-
+<script src="js/funcoes_perfil.js">
 </script>

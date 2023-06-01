@@ -17,7 +17,7 @@
 
             <div class="informPerfil">
                 <div class="inform1">
-                    <div><img class="imgPerfil" src="assets/img/flores3.jpeg" alt=""></div>
+                    <div><img class="imgPerfil" src="assets/img/iconePerfil.png" alt=""></div>
                     <div class="inform2">
                         <div class="hello">
                             <p>@<span id="b_usuario">usuário</span></p>
@@ -35,13 +35,63 @@
 
         <div class="sectionPerfil">
             <div class="textosSection">
-                <b>
-                    <p>RECOMENDAÇÕES</p>
-                </b>
+                <b><p>RECOMENDAÇÕES</p></b>
                 <div class="reta"></div>
                 <p> <a href="perfil _favs.html">FAVORITOS</a> </p>
-                <div class="reta"></div>
-                <p> <a href="perfil_registros.html">SEUS REGISTROS</a> </p>
+            </div>
+        </div>
+
+        <div class="perfil2" style="display: none;">
+            <div class="sectionPerfil2">
+                <div class="textosSection2">
+                    <p> <a href="perfil.html">RECOMENDAÇÕES</a> </p>
+                    <div class="reta2"></div>
+                    <b><p>FAVORITOS</p></b>
+                </div>
+            </div>
+    
+            <div class="fotos2">
+                <div class="caixaFotos2">
+                    <div id="animaisFav" style="display: none;">
+                        <img src="assets/img/animais1.jpeg" alt="">
+                        <img src="assets/img/animais2.jpeg" alt="">
+                        <img src="assets/img/animais3.jpeg" alt="">
+                        <img src="assets/img/animais4.jpeg" alt="">
+                        <img src="assets/img/animais5.jpeg" alt="">
+                        <img src="assets/img/animais6.jpeg" alt="">
+                        <img src="assets/img/animais7.jpeg" alt="">
+                        <img src="assets/img/animais8.jpeg" alt="">
+                        <img src="assets/img/animais9.jpeg" alt="">
+                        <img src="assets/img/animais10.jpeg" alt="">
+                    </div>
+                    <div id="PaisagemFav" style="display: none;">
+                        <img src="assets/img/paisagem1.jpeg" alt="">
+                        <img src="assets/img/paisagem2.jpeg" alt="">
+                        <img src="assets/img/paisagem3.jpeg" alt="">
+                        <img src="assets/img/paisagem4.jpeg" alt="">
+                        <img src="assets/img/paisagem5.jpeg" alt="">
+                        <img src="assets/img/paisagem6.jpeg" alt="">
+                        <img src="assets/img/paisagem7.jpeg" alt="">
+                        <img src="assets/img/paisagem8.jpeg" alt="">
+                        <img src="assets/img/paisagem9.jpeg" alt="">
+                        <img src="assets/img/paisagem10.jpeg" alt="">
+                    </div>
+                    <div id="FloresFav" style="display: none;">
+                        <img src="assets/img/flores1.jpeg" alt="">
+                        <img src="assets/img/flores2.jpeg" alt="">
+                        <img src="assets/img/flores3.jpeg" alt="">
+                        <img src="assets/img/flores4.jpeg" alt="">
+                        <img src="assets/img/flores5.jpeg" alt="">
+                        <img src="assets/img/flores6.jpeg" alt="">
+                        <img src="assets/img/flores7.jpeg" alt="">
+                        <img src="assets/img/flores8.jpeg" alt="">
+                        <img src="assets/img/flores9.jpeg" alt="">
+                        <img src="assets/img/flores10.jpeg" alt="">
+                    </div>
+                    <div class="graficoUsuario">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -53,8 +103,8 @@
                         <div class="classificarRecomendacaoAnimais"></div> <h2>Animais</h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
-                        <button id="favoritar" type="button" onclick="favoritar()"> <img src="assets/img/favoritar_vetor.png" height ="35" width="35" /></button>
+                        <button id="curtir" type="button" onclick="curtirBotao()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="favoritar" type="button" onclick="favoritarBotao()"> <img src="assets/img/favoritar_vetor.png" height ="35" width="35" /></button>
                     </div>
                 </div>
 
@@ -444,12 +494,5 @@
 
 </html>
 
-<script>
-    function curtir() {
-
-    }
-
-    function favoritar() {
-
-    }
+<script src="js/funcoes_perfil.js">
 </script>
