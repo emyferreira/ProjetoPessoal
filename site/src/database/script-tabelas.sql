@@ -21,18 +21,10 @@ CREATE TABLE Usuário (
 
 CREATE TABLE Nicho (
   idNicho INT PRIMARY KEY AUTO_INCREMENT,
-  nichoFavorito VARCHAR(45),
+  nicho VARCHAR(45),
   fkUsuario INT,
   FOREIGN KEY (fkUsuario) REFERENCES Usuário(idUsuario)
 )AUTO_INCREMENT = 100;
-
-CREATE TABLE Registro (
-  idRegistro INT PRIMARY KEY AUTO_INCREMENT,
-  imgRegistro VARCHAR(50),
-  legenda VARCHAR(45),
-  fkUsuario INT,
-  FOREIGN KEY (fkUsuario) REFERENCES Usuário(idUsuario)
-)AUTO_INCREMENT = 1000;
 
 CREATE TABLE Dashboard (
   idDashboard INT PRIMARY KEY AUTO_INCREMENT,
