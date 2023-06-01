@@ -44,7 +44,7 @@ header {
 
 .fim img {
     height: 3000%;
-    padding: 3%;
+    padding: 2.5%;
 }
 
 .menu {
@@ -122,6 +122,7 @@ header {
     width: 15vw;
     margin-left: 5%;
     text-align: center;
+    color: black;
 }
 
 .recomendacao img {

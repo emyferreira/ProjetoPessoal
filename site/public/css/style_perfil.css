@@ -126,6 +126,10 @@ a {
     margin-left: 50%;
 }
 
+#ultimaFoto {
+   margin-bottom: 5%;
+}
+
 .informRecomendacoes {
     width: 8vw;
     height: 32vh;
@@ -158,8 +162,25 @@ a {
 }
 
 .classif {
+    width: 150%;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+.botoesRecomendacao {
+    display: flex;
+    flex-direction: row;
+}
+
+#curtir {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#favoritar {
+    background-color: transparent;
+    border-color: transparent;
 }
 
 /* tela 1 fim */

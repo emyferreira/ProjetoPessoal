@@ -12,6 +12,9 @@
     <script src="./js/funcoes.js"></script>
     <link rel="icon" href="./assets/icon/img_icone.ico">
     <link rel="stylesheet" href="./css/style_cadastro.css">
+    <link rel="stylesheet" href="perfil _favs.html">
+    <link rel="stylesheet" href="perfil.html">
+    <link rel="stylesheet" href="perfil_registros.html">
 </head>
 
 <body>
@@ -107,7 +110,7 @@
             </div>
             <div class="botoesCadastro3">
                 <button class="botaoVoltar3">Voltar</button>
-                <button class="botaoAvancar3" onclick="cadastrar()">Cadastrar</button>
+                <button class="botaoAvancar3" onclick="cadastrar()"> <a href="perfil.html">Cadastrar</a> </button>
             </div>
             <div id="div_aguardar" class="loading-div">
                 <img src="./assets/circle-loading.gif" id="loading-gif">
@@ -134,31 +137,31 @@
         const isChecked = checkbox.checked;
         if (isChecked) {
             // o checkbox está marcado
-            alert('Animais Selecionado')
+            cadastroTela2.style.display = 'none';
+            cadastroTela3.style.display = 'block';
         } else {
             // o checkbox não está marcado
             const checkbox = document.getElementById("checkBoxPaisagem");
             const isChecked = checkbox.checked;
             if (isChecked) {
                 // o checkbox está marcado
-                alert('Paisagem Selecionado')
+                cadastroTela2.style.display = 'none';
+                cadastroTela3.style.display = 'block';
             } else {
                 // o checkbox não está marcado
                 const checkbox = document.getElementById("checkBoxFlores");
                 const isChecked = checkbox.checked;
                 if (isChecked) {
                     // o checkbox está marcado
-                    alert('Flores Selecionado')
+                    cadastroTela2.style.display = 'none';
+                    cadastroTela3.style.display = 'block';
                 } else {
-                    // o checkbox não está marcado
+                    alert('É obrigatório selecionar um campo!')
+
                 }
             }
         }
 
-
-
-        cadastroTela2.style.display = 'none';
-        cadastroTela3.style.display = 'block';
     }
 
     function cadastrar() {
