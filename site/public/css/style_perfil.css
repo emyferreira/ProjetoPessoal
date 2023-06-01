@@ -3,6 +3,11 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 /* tela 1 */
 .perfil1 {
     width: 100%;
@@ -15,12 +20,29 @@ body {
     width: 100%;
 }
 
+.botaoLogo {
+    display: flex;
+    flex-direction: column;
+}
+
+.botaoVoltarHome {
+    font-size: 15px;
+    width: 100px;
+    height: 32px;
+    border: 1px solid #260016;
+    color: white;
+    border-radius: 40px;
+    background-color: #260016;
+    margin-left: 630%;
+    margin-top: 15%;
+}
+
 .logoPequena {
     width: 3vw;
     height: 10vh;
     display: flex;
-    margin-left: 1700%;
-    margin-top: 70%;
+    margin-left: 680%;
+    margin-top: 15%;
 }
 
 .informPerfil {
@@ -81,15 +103,8 @@ body {
 }
 
 .fotos {
-    width: 100vw;
-    height: 65vh;
-}
-
-.caixaFotos {
-    border: 1px solid #260016;
-    width: 98%;
-    height: 2865%;
-    margin: 1% 1% 1% 1%;
+   width: 100%;
+   height: fit-content;
 }
 
 .recomend {
@@ -112,13 +127,39 @@ body {
 }
 
 .informRecomendacoes {
-    width: 10vw;
-    height: 35vh;
+    width: 8vw;
+    height: 32vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 7%;
     margin-left: 3%;
+}
+
+.classificarRecomendacaoAnimais {
+    width: 3.1vw;
+    height: 6vh;
+    border: 1px solid #da5fda;
+    background-color: #da5fda;
+}
+
+.classificarRecomendacaoPaisagem {
+    width: 3.1vw;
+    height: 6vh;
+    border: 1px solid #a882ee;
+    background-color: #a882ee;
+}
+
+.classificarRecomendacaoFlores {
+    width: 3.1vw;
+    height: 6vh;
+    border: 1px solid #ee82bd;
+    background-color: #ee82bd;
+}
+
+.classif {
+    display: flex;
+    flex-direction: row;
 }
 
 /* tela 1 fim */
@@ -206,13 +247,11 @@ body {
     height: 365vh;
 }
 
-.caixaFotos2 {
-    border: 1px solid #260016;
-    width: 98%;
-    height: 100%;
-    margin: 1% 1% 1% 1%;
-}
 
+.graficoUsuario {
+    width: 60vw;
+    height: 55vh;
+}
 /* tela 2 fim  */
 
 /* tela 3 */
@@ -298,11 +337,5 @@ body {
     height: 65vh;
 }
 
-.caixaRegistrosUsuario {
-    border: 1px solid #260016;
-    width: 98%;
-    height: 300%;
-    margin: 1% 1% 1% 1%;
-}
 
 /* tela 3 fim  */

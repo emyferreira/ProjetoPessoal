@@ -4,10 +4,11 @@ body {
 
 /* Começo da tela 1 do cadastro */
 #cadastroTela1 {
+    height: 100%;
     display: flex;
+    padding: 7%;
     justify-content: center;
     align-items: center;
-    padding: 7%;
 }
 .fundoForm {
     background-color: #E6DDBC;
@@ -51,7 +52,7 @@ input {
     font-size: 15px;
     width: 100px;
     height: 32px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #260016;
     color: white;
     border-radius: 40px;
     background-color: #260016;
@@ -60,7 +61,7 @@ input {
     font-size: 15px;
     width: 100px;
     height: 32px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #260016;
     color: white;
     border-radius: 40px;
     background-color: #260016;
@@ -133,7 +134,7 @@ input {
     font-size: 15px;
     width: 100px;
     height: 32px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #260016;
     color: white;
     border-radius: 40px;
     background-color: #260016;
@@ -142,7 +143,7 @@ input {
     font-size: 15px;
     width: 100px;
     height: 32px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #260016;
     color: white;
     border-radius: 40px;
     background-color: #260016;
@@ -235,7 +236,7 @@ input {
     font-size: 15px;
     width: 100px;
     height: 32px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #260016;
     color: white;
     border-radius: 40px;
     background-color: #260016;
@@ -244,7 +245,7 @@ input {
     font-size: 15px;
     width: 100px;
     height: 32px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #260016;
     color: white;
     border-radius: 40px;
     background-color: #260016;
@@ -319,7 +320,7 @@ input {
     font-size: 15px;
     width: 100px;
     height: 35px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #260016;
     color: white;
     border-radius: 40px;
     background-color: #260016;
@@ -328,7 +329,7 @@ input {
     font-size: 15px;
     width: 100px;
     height: 35px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #260016;
     color: white;
     border-radius: 40px;
     background-color: #260016;
