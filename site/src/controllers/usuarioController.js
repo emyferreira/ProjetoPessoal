@@ -33,7 +33,7 @@ function entrar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
-        
+
         usuarioModel.entrar(email, senha)
             .then(
                 function (resultado) {
@@ -60,6 +60,27 @@ function entrar(req, res) {
 
 }
 
+function escolhaPronome(req, res) {
+    var pronomes = req.body.pronomesServer;
+
+    usuarioModel.escolhaPronome(pronomes)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                    cadastrar();
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao pegar pronomes! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+}
+
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
@@ -67,6 +88,7 @@ function cadastrar(req, res) {
     var username = req.body.userServer;
     var senha = req.body.senhaServer;
     var biografia = req.body.biografiaServer;
+    var pronomes = req.body.pronomesServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -80,9 +102,9 @@ function cadastrar(req, res) {
     } else if (biografia == undefined) {
         res.status(400).send("Sua biografia está undefined!");
     } else {
-        
+
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, username, senha, biografia)
+        usuarioModel.cadastrar(nome, email, username, senha, biografia, pronomes)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -102,6 +124,7 @@ function cadastrar(req, res) {
 
 module.exports = {
     entrar,
+    escolhaPronome,
     cadastrar,
     listar,
     testar

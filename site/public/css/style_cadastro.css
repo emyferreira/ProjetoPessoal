@@ -12,8 +12,8 @@ body {
 }
 .fundoForm {
     background-color: #E6DDBC;
-    width: 57vw;
-    height: 62vh;
+    width: 50vw;
+    height: 60vh;
     border-radius: 17px;
 }
 .fundoForm h1 {
@@ -159,8 +159,8 @@ input {
 }
 .fundoForm3 {
     background-color: #E6DDBC;
-    width: 57vw;
-    height: 65vh;
+    width: 33vw;
+    height: 48vh;
     border-radius: 17px;
 }
 .fundoForm3 h3 {

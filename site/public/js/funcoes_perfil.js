@@ -26,30 +26,6 @@ function cadastrar() {
         setInterval(sumirMensagem, 5000)
     }
 
-    const checkbox = document.getElementById("checkBoxAnimais");
-    const isChecked = checkbox.checked;
-    if (isChecked) {
-        // o checkbox está marcado
-
-    } else {
-        // o checkbox não está marcado
-        const checkbox = document.getElementById("checkBoxPaisagem");
-        const isChecked = checkbox.checked;
-        if (isChecked) {
-            // o checkbox está marcado
-        } else {
-            // o checkbox não está marcado
-            const checkbox = document.getElementById("checkBoxFlores");
-            const isChecked = checkbox.checked;
-            if (isChecked) {
-                // o checkbox está marcado
-            } else {
-                alert('É obrigatório selecionar um campo!')
-
-            }
-        }
-    }
-
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
         method: "POST",
@@ -99,33 +75,33 @@ function curtirBotao() {
     curtir.style.backgroundColor = 'red';
 }
 
-// Gráfico
+ // Gráfico
 
-const ctx = document.getElementById('myChart');
+ const ctx = document.getElementById('myChart');
 
-new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Curtidos', 'Favoritados'],
-        datasets: [{
-            label: 'Registros',
-            data: [12, 19],
-            borderWidth: 1,
-            backgroundColor: [
-                'rgba(38, 0, 22, 1)'
-            ],
-            borderColor: [
-                'rgba(38, 0, 22, 1)'
-            ],
-        }]
-    },
-    options: {
-        indexAxis: 'y',
-    }
+ new Chart(ctx, {
+     type: 'bar',
+     data: {
+         labels: ['Curtidos', 'Favoritados'],
+         datasets: [{
+             label: 'Registros',
+             data: [12, 19],
+             borderWidth: 1,
+             backgroundColor: [
+             'rgba(38, 0, 22, 1)'
+             ],
+             borderColor: [
+             'rgba(38, 0, 22, 1)'
+             ],
+         }]
+     },
+     options: {
+         indexAxis: 'y',
+     }
 
-});
+ });
 
-function atualizarFavs() {
+ function atualizarFavs() {
     const checkbox = document.getElementById("checkBoxAnimais");
     const isChecked = checkbox.checked;
     if (isChecked) {
@@ -157,4 +133,5 @@ function atualizarFavs() {
             }
         }
     }
-}
+
+ }
