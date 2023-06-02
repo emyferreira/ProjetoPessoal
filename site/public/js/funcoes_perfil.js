@@ -30,7 +30,7 @@ function cadastrar() {
     const isChecked = checkbox.checked;
     if (isChecked) {
         // o checkbox está marcado
-        
+
     } else {
         // o checkbox não está marcado
         const checkbox = document.getElementById("checkBoxPaisagem");
@@ -99,28 +99,62 @@ function curtirBotao() {
     curtir.style.backgroundColor = 'red';
 }
 
- // Gráfico
+// Gráfico
 
- const ctx = document.getElementById('myChart');
+const ctx = document.getElementById('myChart');
 
- new Chart(ctx, {
-     type: 'bar',
-     data: {
-         labels: ['Curtidos', 'Favoritados'],
-         datasets: [{
-             label: 'Registros',
-             data: [12, 19],
-             borderWidth: 1,
-             backgroundColor: [
-             'rgba(38, 0, 22, 1)'
-             ],
-             borderColor: [
-             'rgba(38, 0, 22, 1)'
-             ],
-         }]
-     },
-     options: {
-         indexAxis: 'y',
-     }
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Curtidos', 'Favoritados'],
+        datasets: [{
+            label: 'Registros',
+            data: [12, 19],
+            borderWidth: 1,
+            backgroundColor: [
+                'rgba(38, 0, 22, 1)'
+            ],
+            borderColor: [
+                'rgba(38, 0, 22, 1)'
+            ],
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+    }
 
- });
+});
+
+function atualizarFavs() {
+    const checkbox = document.getElementById("checkBoxAnimais");
+    const isChecked = checkbox.checked;
+    if (isChecked) {
+        // o checkbox está marcado
+        animaisFav.style.display = 'block';
+        paisagemFav.style.display = 'none';
+        floresFav.style.display = 'none';
+    } else {
+        // o checkbox não está marcado
+        const checkbox = document.getElementById("checkBoxPaisagem");
+        const isChecked = checkbox.checked;
+        if (isChecked) {
+            // o checkbox está marcado
+            animaisFav.style.display = 'none';
+            paisagemFav.style.display = 'block';
+            floresFav.style.display = 'none';
+        } else {
+            // o checkbox não está marcado
+            const checkbox = document.getElementById("checkBoxFlores");
+            const isChecked = checkbox.checked;
+            if (isChecked) {
+                // o checkbox está marcado
+                animaisFav.style.display = 'none';
+                paisagemFav.style.display = 'none';
+                floresFav.style.display = 'block';
+            } else {
+                alert('É obrigatório selecionar um campo!')
+
+            }
+        }
+    }
+}
