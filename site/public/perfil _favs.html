@@ -44,11 +44,18 @@
                 </div>
            
         </div>
-
+        <div class="fotoPerfil">
+            <span><b>Selecione a opção na qual</b></span>
+            <span><b>você mais se identifica:</b></span>
+            <p>Animais<input id="checkBoxAnimais" class="checkBox" type="checkbox"></p>
+            <p>Paisagem<input id="checkBoxPaisagem" class="checkBox" type="checkbox"></p>
+            <p>Flores<input id="checkBoxFlores" class="checkBox" type="checkbox"></p>
+            <button class="botaoAttFavs" onclick="atualizarFavs()">Atualizar</button>
+        </div>
         <div class="fotos2">
             <div class="caixaFotos2">
                 <h3>Seu nicho escolhido foi: </h3>
-                <div id="animaisFav" style="display: block;">
+                <div id="animaisFav" style="display: none;">
                     <img src="assets/img/animais1.jpeg" width="345vw" height="410vh" alt="">
                     <img src="assets/img/animais2.jpeg" width="345vw" height="410vh" alt="">
                     <img src="assets/img/animais3.jpeg" width="345vw" height="410vh" alt="">
@@ -59,8 +66,9 @@
                     <img src="assets/img/animais8.jpeg" width="345vw" height="410vh" alt="">
                     <img src="assets/img/animais9.jpeg" width="345vw" height="410vh" alt="">
                     <img src="assets/img/animais10.jpeg" width="345vw" height="410vh" alt="">
+                    <button class="botaoVerMais"> <a href="https://br.pinterest.com/search/pins/?q=animais&rs=typed">Ver mais</a>  </button>
                 </div>
-                <div id="PaisagemFav" style="display: block;">
+                <div id="paisagemFav" style="display: none;">
                     <img src="assets/img/paisagem1.jpeg" width="345vw" height="410vh" alt="">
                     <img src="assets/img/paisagem2.jpeg" width="345vw" height="410vh" alt="">
                     <img src="assets/img/paisagem3.jpeg" width="345vw" height="410vh" alt="">
@@ -73,7 +81,7 @@
                     <img src="assets/img/paisagem10.jpeg" width="345vw" height="410vh" alt="">
                     <button class="botaoVerMais"> <a href="https://br.pinterest.com/search/pins/?q=paisagens%20simples&rs=typed">Ver mais</a>  </button>
                 </div>
-                <div id="FloresFav" style="display: block;">
+                <div id="floresFav" style="display: none;">
                     <img src="assets/img/flores1.jpeg" width="345vw" height="410vh" alt="">
                     <img src="assets/img/flores2.jpeg" width="345vw" height="410vh" alt="">
                     <img src="assets/img/flores3.jpeg" width="345vw" height="410vh" alt="">
@@ -84,7 +92,9 @@
                     <img src="assets/img/flores8.jpeg" width="345vw" height="410vh" alt="">
                     <img src="assets/img/flores9.jpeg" width="345vw" height="410vh" alt="">
                     <img src="assets/img/flores10.jpeg" width="345vw" height="410vh" alt="">
+                    <button class="botaoVerMais"> <a href="https://br.pinterest.com/search/pins/?q=flores&rs=typed">Ver mais</a>  </button>
                 </div>
+               
                 <div class="graficoUsuario">
                     <canvas id="myChart"></canvas>
                 </div>
