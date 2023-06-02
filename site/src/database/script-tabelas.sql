@@ -16,7 +16,8 @@ CREATE TABLE Usuário (
   email VARCHAR(45),
   username VARCHAR(45),
   senha VARCHAR(45),
-  biografia VARCHAR(50)
+  biografia VARCHAR(50),
+  pronomes VARCHAR(10)
 );
 
 CREATE TABLE Nicho (
@@ -28,11 +29,18 @@ CREATE TABLE Nicho (
 
 CREATE TABLE Dashboard (
   idDashboard INT PRIMARY KEY AUTO_INCREMENT,
-  favoritos VARCHAR(45),
-  curtidos VARCHAR(45),
   fkUsuario INT,
   FOREIGN KEY (fkUsuario) REFERENCES Usuário(idUsuario)
 )AUTO_INCREMENT = 10000;
+
+CREATE TABLE medida (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  favoritos INT,
+  curtidos INT,
+  momento DATETIME,
+  fkDashboard INT,
+	FOREIGN KEY (fkDashboard) REFERENCES Dashboard(idDashboard)
+);
 
 -- CREATE DATABASE aquatech;
 
