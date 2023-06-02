@@ -34,7 +34,7 @@
 
         <div class="sectionPerfil">
             <div class="textosSection">
-                <b><p>RECOMENDAÇÕES</p></b>
+                <b><p>RECOMENDAÇÕES<p></b>
                 <div class="reta"></div>
                 <p> <a href="perfil _favs.html">FAVORITOS</a> </p>
             </div>
@@ -43,7 +43,7 @@
         <div class="perfil2" style="display: none;">
             <div class="sectionPerfil2">
                 <div class="textosSection2">
-                    <p> <a href="perfil.html">RECOMENDAÇÕES</a> </p>
+                    <p> <a href="perfil.html">RECOMENDAÇÕES<a> </p>
                     <div class="reta2"></div>
                     <b><p>FAVORITOS</p></b>
                 </div>
@@ -51,40 +51,40 @@
             <div class="fotos2">
                 <div class="caixaFotos2">
                     <div id="animaisFav" style="display: none;">
-                        <img src="assets/img/animais1.jpeg" alt="">
-                        <img src="assets/img/animais2.jpeg" alt="">
-                        <img src="assets/img/animais3.jpeg" alt="">
-                        <img src="assets/img/animais4.jpeg" alt="">
-                        <img src="assets/img/animais5.jpeg" alt="">
-                        <img src="assets/img/animais6.jpeg" alt="">
-                        <img src="assets/img/animais7.jpeg" alt="">
-                        <img src="assets/img/animais8.jpeg" alt="">
-                        <img src="assets/img/animais9.jpeg" alt="">
-                        <img src="assets/img/animais10.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/animais1.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/animais2.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/animais3.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/animais4.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/animais5.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/animais6.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/animais7.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/animais8.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/animais9.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/animais10.jpeg" alt="">
                     </div>
                     <div id="PaisagemFav" style="display: none;">
-                        <img src="assets/img/paisagem1.jpeg" alt="">
-                        <img src="assets/img/paisagem2.jpeg" alt="">
-                        <img src="assets/img/paisagem3.jpeg" alt="">
-                        <img src="assets/img/paisagem4.jpeg" alt="">
-                        <img src="assets/img/paisagem5.jpeg" alt="">
-                        <img src="assets/img/paisagem6.jpeg" alt="">
-                        <img src="assets/img/paisagem7.jpeg" alt="">
-                        <img src="assets/img/paisagem8.jpeg" alt="">
-                        <img src="assets/img/paisagem9.jpeg" alt="">
-                        <img src="assets/img/paisagem10.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/paisagem1.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/paisagem2.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/paisagem3.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/paisagem4.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/paisagem5.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/paisagem6.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/paisagem7.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/paisagem8.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/paisagem9.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/paisagem10.jpeg" alt="">
                     </div>
                     <div id="FloresFav" style="display: none;">
-                        <img src="assets/img/flores1.jpeg" alt="">
-                        <img src="assets/img/flores2.jpeg" alt="">
-                        <img src="assets/img/flores3.jpeg" alt="">
-                        <img src="assets/img/flores4.jpeg" alt="">
-                        <img src="assets/img/flores5.jpeg" alt="">
-                        <img src="assets/img/flores6.jpeg" alt="">
-                        <img src="assets/img/flores7.jpeg" alt="">
-                        <img src="assets/img/flores8.jpeg" alt="">
-                        <img src="assets/img/flores9.jpeg" alt="">
-                        <img src="assets/img/flores10.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/flores1.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/flores2.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/flores3.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/flores4.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/flores5.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/flores6.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/flores7.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/flores8.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/flores9.jpeg" alt="">
+                        <img class="imgsPerfil" src="assets/img/flores10.jpeg" alt="">
                     </div>
                     <div class="graficoUsuario">
                         <canvas id="myChart"></canvas>
@@ -101,7 +101,7 @@
                         <div class="classificarRecomendacaoAnimais"></div> <h2>Animais</h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtirBotao()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir1(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -110,10 +110,10 @@
                 <img src="assets/img/paisagem1.jpeg" class="recomendacoes2" alt="p1">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir2(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -122,10 +122,10 @@
                 <img src="assets/img/flores1.jpeg" class="recomendacoes1" alt="f1">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores<h2>
                     </div>
                     <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir3(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -137,7 +137,7 @@
                         <div class="classificarRecomendacaoAnimais"></div> <h2>Animais</h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir1(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -146,10 +146,10 @@
                 <img src="assets/img/paisagem2.jpeg" class="recomendacoes1" alt="p2">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir2(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -158,10 +158,10 @@
                 <img src="assets/img/flores2.jpeg" class="recomendacoes2" alt="f2">
                 <div class="informRecomendacoes">
                     <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Flores<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir3(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -173,7 +173,7 @@
                         <div class="classificarRecomendacaoAnimais"></div> <h2>Animais</h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir1(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -182,10 +182,10 @@
                 <img src="assets/img/paisagem3.jpeg" class="recomendacoes2" alt="p3">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir2(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -194,10 +194,10 @@
                 <img src="assets/img/flores3.jpeg" class="recomendacoes1" alt="f3">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir3(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -209,7 +209,7 @@
                         <div class="classificarRecomendacaoAnimais"></div> <h2>Animais</h2>
                     </div>
                     <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir1(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -218,10 +218,10 @@
                 <img src="assets/img/paisagem4.jpeg" class="recomendacoes1" alt="p4">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir2(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -230,10 +230,10 @@
                 <img src="assets/img/flores4.jpeg" class="recomendacoes2" alt="f4">
                 <div class="informRecomendacoes">
                       <div class="classif">
-                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir3(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -245,7 +245,7 @@
                         <div class="classificarRecomendacaoAnimais"></div> <h2>Animais</h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir1(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -254,10 +254,10 @@
                 <img src="assets/img/paisagem5.jpeg" class="recomendacoes2" alt="p5">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir2(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -266,10 +266,10 @@
                 <img src="assets/img/flores5.jpeg" class="recomendacoes1" alt="f5">
                 <div class="informRecomendacoes">
                    <div class="classif">
-                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir3(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -278,10 +278,10 @@
                 <img src="assets/img/animais6.jpeg" class="recomendacoes2" alt="a6">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoFlores"></div> <h2>Animais<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir1(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -290,10 +290,10 @@
                 <img src="assets/img/paisagem6.jpeg" class="recomendacoes1" alt="p6">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir2(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -302,10 +302,10 @@
                 <img src="assets/img/flores6.jpeg" class="recomendacoes2" alt="f6">
                 <div class="informRecomendacoes">
                <div class="classif">
-                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir3(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -317,7 +317,7 @@
                         <div class="classificarRecomendacaoAnimais"></div> <h2>Animais</h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir1(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -326,10 +326,10 @@
                 <img src="assets/img/paisagem7.jpeg" class="recomendacoes2" alt="p7">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir2(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -338,10 +338,10 @@
                 <img src="assets/img/flores7.jpeg" class="recomendacoes1" alt="f7">
                 <div class="informRecomendacoes">
                  <div class="classif">
-                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir3(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -353,7 +353,7 @@
                         <div class="classificarRecomendacaoAnimais"></div> <h2>Animais</h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir1(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -362,10 +362,10 @@
                 <img src="assets/img/paisagem8.jpeg" class="recomendacoes1" alt="p8">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir2(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -374,10 +374,10 @@
                 <img src="assets/img/flores8.jpeg" class="recomendacoes2" alt="f8">
                 <div class="informRecomendacoes">
                  <div class="classif">
-                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir3(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -389,7 +389,7 @@
                         <div class="classificarRecomendacaoAnimais"></div> <h2>Animais</h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir1(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -398,10 +398,10 @@
                 <img src="assets/img/paisagem9.jpeg" class="recomendacoes2" alt="p9">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir2(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -410,10 +410,10 @@
                 <img src="assets/img/flores9.jpeg" class="recomendacoes1" alt="f9">
                 <div class="informRecomendacoes">
                 <div class="classif">
-                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir3(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -425,7 +425,7 @@
                         <div class="classificarRecomendacaoAnimais"></div> <h2>Animais</h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir1(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -434,10 +434,10 @@
                 <img src="assets/img/paisagem10.jpeg" class="recomendacoes1" alt="p10">
                 <div class="informRecomendacoes">
                      <div class="classif">
-                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem</h2>
+                        <div class="classificarRecomendacaoPaisagem"></div> <h2>Paisagem<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir2(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 
@@ -446,10 +446,10 @@
                 <img src="assets/img/flores10.jpeg" class="recomendacoes2" id="ultimaFoto" alt="f10">
                 <div class="informRecomendacoes">
                    <div class="classif">
-                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores</h2>
+                        <div class="classificarRecomendacaoFlores"></div> <h2>Flores<h2>
                     </div>
                      <div class="botoesRecomendacao">
-                        <button id="curtir" type="button" onclick="curtir()"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
+                        <button id="curtir" type="button" onclick="curtir3(1)"> <img src="assets/img/curtir_vetor.svg" height ="40" width="40" /></button>
                     </div>
                 </div>
 

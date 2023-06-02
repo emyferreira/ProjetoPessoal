@@ -134,3 +134,69 @@ function curtirBotao() {
         }
     }
  }
+
+function curtir1(valor) {
+
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var curtido = valor;
+
+     console.log ("post curtido!");
+
+     fetch("/usuarios/curtir1", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idServer: idUsuario,
+            curtirServer: curtido
+        })
+     })
+
+     return false;
+
+}
+
+function curtir2(valor) {
+
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var curtido2 = valor;
+
+     console.log ("post curtido!");
+
+     fetch("/usuarios/curtir", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idServer: idUsuario,
+            curtir2Server: curtido2
+        })
+     })
+     
+     return false;
+
+}
+
+function curtir3(valor) {
+
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var curtido3 = valor;
+
+     console.log ("post curtido!");
+
+     fetch("/usuarios/curtir", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idServer: idUsuario,
+            curtir3Server: curtido3
+        })
+     })
+     
+     return false;
+
+}

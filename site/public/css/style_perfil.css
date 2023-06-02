@@ -120,6 +120,7 @@ a {
     height: 49vh;
     margin-top: 6%;  
     margin-left: 18%;
+    border: 2px solid #260016;
 }
 
 .recomendacoes2 {
@@ -127,6 +128,7 @@ a {
     height: 49vh;
     margin-top: 6%;
     margin-left: 50%;
+    border: 2px solid #260016;
 }
 
 #ultimaFoto {
@@ -182,15 +184,8 @@ a {
 
 #curtir {
     background-color: transparent;
-    border-color: #26001651;
+    border-color: #2600004b;
     margin-left: 6%;
-    border-radius: 50%;
-}
-
-#favoritar {
-    background-color: transparent;
-    border-color: #26001651;
-    margin-left: 7%;
     border-radius: 50%;
 }
 
@@ -282,6 +277,13 @@ a {
     color: white;
     border-radius: 40px;
     background-color: #260016;
+}
+
+.imgFavoritos {
+    margin-right: 2%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border: 2px solid #260016;
 }
 
 .graficoUsuario {

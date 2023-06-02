@@ -20,4 +20,16 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.post("/curtir1", function (req, res) {
+    usuarioController.curtir1(req, res);
+});
+
+router.post("/curtir2", function (req, res) {
+    usuarioController.entrar(req, res);
+});
+
+router.post("/curtir3", function (req, res) {
+    usuarioController.entrar(req, res);
+});
+
 module.exports = router;

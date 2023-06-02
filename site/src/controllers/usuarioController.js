@@ -100,9 +100,75 @@ function cadastrar(req, res) {
     }
 }
 
+function curtir1(req, res) {
+    var idUsuario = req.body.idServer
+    var curtidos1 = req.body.curtirServer;
+
+    usuarioModel.curtir1(idUsuario, curtidos1)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao pegar a curtida! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+}
+
+function curtir2(req, res) {
+    var idUsuario = req.body.idServer
+    var curtidos2 = req.body.curtirServer;
+
+    usuarioModel.curtir2(idUsuario, curtidos2)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao pegar a curtida! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+}
+
+function curtir3(req, res) {
+    var idUsuario = req.body.idServer
+    var curtidos3 = req.body.curtirServer;
+
+    usuarioModel.curtir3(idUsuario, curtidos3)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao pegar a curtida! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    curtir1,
+    curtir2,
+    curtir3,
 }
