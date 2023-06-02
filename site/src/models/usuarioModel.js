@@ -31,8 +31,28 @@ function cadastrar(nome, email, username, senha, biografia) {
     return database.executar(instrucao);
 }
 
+function checkBox(nicho) {
+    if (nicho == 1) {
+        console.log("animais");
+    }
+    if (nicho == 2) {
+        console.log("paisagem");
+    }
+    if (nicho == 3) {
+        console.log("flores");
+    }
+
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", nicho)
+    var instrucao = `
+        SELECT * FROM Nicho WHERE nicho = '${nicho}';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    checkBox,
 };
