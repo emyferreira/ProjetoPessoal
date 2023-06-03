@@ -1,6 +1,38 @@
 function avancar() {
+    var nomeVar = nome_input.value;
+    var emailVar = email_input.value;
+    var userVar = user_input.value;
+    var senhaVar = senha_input.value;
+    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+    if (nomeVar == "" && emailVar == "" && userVar == "" && senhaVar == "" && confirmacaoSenhaVar == "") {
+        alert('Todos os campos estão em branco! Prrencha os campos.')
+    } 
+    else if (nomeVar == "") {
+        alert('O campo do nome não pode estar vazio!')
+    }
+    else if (emailVar == "") {
+        alert('O campo do e-mail não pode estar vazio!')
+    } else if (emailVar.indexOf('@') == -1) {
+        alert('Insira um e-mail válido!')
+    }
+    else if (userVar == "") {
+        alert('Insira seu nome de usuário!')
+    }
+    else if (senhaVar == "") {
+        alert('Insira sua senha!')
+    }
+    else if (confirmacaoSenhaVar == "") {
+        alert('Confirme sua senha!')
+    }
+    else if (senhaVar != confirmacaoSenhaVar) {
+        alert('As senhas não são iguais, tente novamente!')
+    }
+    else {
     cadastroTela1.style.display = 'none';
-    cadastroTela2.style.display = 'block';
+        cadastroTela2.style.display = 'block';  
+    }
+   
 }
 
 function cadastrar() {
@@ -15,16 +47,9 @@ function cadastrar() {
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
     var biografiaVar = biografia_input.value;
 
-    if (nomeVar == "" || emailVar == "" || userVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-        cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "(Erro: todos os campos estão em branco!)";
 
-        finalizarAguardar();
-        return false;
-    }
-    else {
         setInterval(sumirMensagem, 5000)
-    }
+    
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
