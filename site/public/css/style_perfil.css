@@ -104,7 +104,13 @@ a {
     text-decoration: none;
     color: white;
 }
-
+.nichoEscolhido {
+    display: flex;
+    flex-direction: row;
+}
+.nichoEscolhido h4 {
+  margin-left: 1%;
+}
 .fotos {
    width: 100%;
    height: fit-content;

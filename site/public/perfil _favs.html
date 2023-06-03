@@ -48,14 +48,19 @@
         <div class="fotoPerfil">
             <span><b>Selecione a opção na qual</b></span>
             <span><b>você mais se identifica:</b></span>
-            <p>Animais<input id="checkBoxAnimais"  type="checkbox"></p>
-            <p>Paisagem<input id="checkBoxPaisagem"  type="checkbox"></p>
-            <p>Flores<input id="checkBoxFlores"  type="checkbox"></p>
+            <select name="nichos" id="nichos">
+                <option id="animaisOption" value="animais">Animais</option>
+                <option id="paisagensOption" value="paisagens">Paisagens</option>
+                <option id="floresOption" value="flores">Flores</option>
+            </select>
             <button class="botaoAttFavs" onclick="atualizarFavs()">Atualizar</button>
         </div>
         <div class="fotos2">
             <div class="caixaFotos2">
-                <h3>Seu nicho escolhido foi: </h3>
+                <div class="nichoEscolhido">
+                    <h3>Seu nicho escolhido foi: </h3> 
+                    <h4><div id="nichoEscolhido"></div></h4>
+                </div>
                 <div id="animaisFav" style="display: none;">
                     <img class="imgFavoritos" src="assets/img/animais1.jpeg" width="345vw" height="410vh" alt="">
                     <img class="imgFavoritos" src="assets/img/animais2.jpeg" width="345vw" height="410vh" alt="">

@@ -31,35 +31,43 @@ function cadastrar(nome, email, username, senha, biografia) {
     return database.executar(instrucao);
 }
 
-function curtir1(idUsuario, curtidosAnimais, fkDashboard) {
+function curtir1(idUsuario, fkDashboard) {
+
+    var instrucaoDash = `
+    INSERT INTO Dashboard (idUsuario) VALUES (${idUsuario});
+    `;
+
+    var instrucao = `
+    INSERT INTO MedidaAnimais (fkDashboard) VALUES (${fkDashboard});
+    `;
+
+    return database.executar(instrucaoDash), database.executar(instrucao);
+}
+
+function curtir2(idUsuario, fkDashboard) {
 
     var instrucaoDash = `
     INSERT INTO Dashboard (fkUsuario) VALUES (${idUsuario});
     `;
 
     var instrucao = `
-    INSERT INTO Medida (curtidosAnimais, fkDashboard) VALUES (${curtidosAnimais}, ${fkDashboard});
+    INSERT INTO MedidaPaisagem (fkDashboard) VALUES (${fkDashboard});
     `;
 
     return database.executar(instrucaoDash), database.executar(instrucao);
 }
 
-function curtir2(idUsuario, curtidosPaisagem) {
+function curtir3(idUsuario, fkDashboard) {
 
-    var instrucao = `
-    INSERT INTO Medida (idUsuario, curtidosPaisagem) VALUES (${idUsuario}, ${curtidosPaisagem});
+    var instrucaoDash = `
+    INSERT INTO Dashboard (fkUsuario) VALUES (${idUsuario});
     `;
 
-    return database.executar(instrucao);
-}
-
-function curtir3(idUsuario, curtidosFlores) {
-
     var instrucao = `
-    INSERT INTO Medida (idUsuario, curtidosFlores) VALUES (${idUsuario}, ${curtidosFlores});
+    INSERT INTO MedidaFlores (fkDashboard) VALUES (${fkDashboard});
     `;
 
-    return database.executar(instrucao);
+    return database.executar(instrucaoDash), database.executar(instrucao);
 }
 
 module.exports = {

@@ -98,43 +98,33 @@ function sumirMensagem() {
  });
 
  function atualizarFavs() {
-    const checkbox = document.getElementById("checkBoxAnimais");
-    const isChecked = checkbox.checked;
-    if (isChecked) {
-        // o checkbox está marcado
+    var select = nichos.value;
+    var nichoAnimais = animaisOption.value;
+    var nichoPaisagens = paisagensOption.value;
+    var nichoFlores = floresOption.value;
+
+    if (select == nichoAnimais) {
         animaisFav.style.display = 'block';
         paisagemFav.style.display = 'none';
         floresFav.style.display = 'none';
-    } else {
-        // o checkbox não está marcado
-        const checkbox = document.getElementById("checkBoxPaisagem");
-        const isChecked = checkbox.checked;
-        if (isChecked) {
-            // o checkbox está marcado
-            animaisFav.style.display = 'none';
-            paisagemFav.style.display = 'block';
-            floresFav.style.display = 'none';
-        } else {
-            // o checkbox não está marcado
-            const checkbox = document.getElementById("checkBoxFlores");
-            const isChecked = checkbox.checked;
-            if (isChecked) {
-                // o checkbox está marcado
-                animaisFav.style.display = 'none';
-                paisagemFav.style.display = 'none';
-                floresFav.style.display = 'block';
-            } else {
-                alert('É obrigatório selecionar um campo!')
-
-            }
-        }
-    }
+        nichoEscolhido.innerHTML = 'Animais';
+    } if (select == nichoPaisagens) {
+        paisagemFav.style.display = 'block';
+        animaisFav.style.display = 'none';
+        floresFav.style.display = 'none';
+        nichoEscolhido.innerHTML = 'Paisagens';
+    } if (select == nichoFlores) {
+        floresFav.style.display = 'block';
+        animaisFav.style.display = 'none';
+        paisagemFav.style.display = 'none';
+        nichoEscolhido.innerHTML = 'Flores';
+    } 
+    
  }
 
 function curtir1() {
 
-    var idUsuario = sessionStorage.ID_USUARIO;
-    var curtido = (curtido +=1);
+    var fkUsuario = sessionStorage.ID_USUARIO;
 
      console.log ("post curtido!");
      msgPostCurtido.innerHTML = 'Post Curtido!';
@@ -145,19 +135,33 @@ function curtir1() {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            idServer: idUsuario,
-            curtirServer: curtido++
+            fkUsuarioServer: fkUsuario,
         })
-     })
+     }).then(function (resposta) {
 
-     return false;
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            cardErro.style.display = "block";
+
+            mensagem_erro.innerHTML = "post curtidooo";
+
+            limparFormulario();
+            finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao curtir!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
+    return false;
 
 }
 
 function curtir2() {
 
     var idUsuario = sessionStorage.ID_USUARIO;
-    var curtido2 = 1;
 
      console.log ("post curtido!");
 
@@ -168,7 +172,6 @@ function curtir2() {
         },
         body: JSON.stringify({
             idServer: idUsuario,
-            curtir2Server: curtido2
         })
      })
      
@@ -179,7 +182,6 @@ function curtir2() {
 function curtir3() {
 
     var idUsuario = sessionStorage.ID_USUARIO;
-    var curtido3 = 1;
 
      console.log ("post curtido!");
 
@@ -190,7 +192,6 @@ function curtir3() {
         },
         body: JSON.stringify({
             idServer: idUsuario,
-            curtir3Server: curtido3
         })
      })
      

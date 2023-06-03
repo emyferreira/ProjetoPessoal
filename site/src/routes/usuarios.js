@@ -25,11 +25,11 @@ router.post("/curtir1", function (req, res) {
 });
 
 router.post("/curtir2", function (req, res) {
-    usuarioController.entrar(req, res);
+    usuarioController.curtir2(req, res);
 });
 
 router.post("/curtir3", function (req, res) {
-    usuarioController.entrar(req, res);
+    usuarioController.curtir3(req, res);
 });
 
 module.exports = router;

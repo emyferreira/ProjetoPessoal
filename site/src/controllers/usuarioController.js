@@ -101,10 +101,9 @@ function cadastrar(req, res) {
 }
 
 function curtir1(req, res) {
-    var idUsuario = req.body.idServer
-    var curtidos1 = req.body.curtirServer;
+    var fkUsuario = req.body.fkUsuarioServer
 
-    usuarioModel.curtir1(idUsuario, curtidos1)
+    usuarioModel.curtir1(fkUsuario)
             .then(
                 function (resultado) {
                     res.json(resultado);

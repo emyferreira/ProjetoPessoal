@@ -10,21 +10,13 @@ CREATE DATABASE RainbowEye;
 
 USE RainbowEye;
 
-CREATE TABLE Nicho (
-  idNicho INT PRIMARY KEY AUTO_INCREMENT,
-  nicho VARCHAR(45)
-)AUTO_INCREMENT = 100;
-
 CREATE TABLE Usuário (
   idUsuario INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(45),
   email VARCHAR(45),
   username VARCHAR(45),
   senha VARCHAR(45),
-  biografia VARCHAR(50),
-  pronomes VARCHAR(10),
-  fkNicho INT,
-  FOREIGN KEY (fkNicho) REFERENCES Nicho(idNicho)
+  biografia VARCHAR(50)
 );
 
 CREATE TABLE Dashboard (
