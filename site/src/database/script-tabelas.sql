@@ -44,11 +44,10 @@ CREATE TABLE MedidaFlores (
 );
 
 select * from MedidaAnimais;
-select * from MedidaPaisagenm;
+select * from MedidaPaisagem;
 select * from MedidaFlores;
 select * from dashboard;
-select * from usuário;
-select * from nicho; 
+select * from usuário; 
 
 -- CREATE DATABASE aquatech;
 
