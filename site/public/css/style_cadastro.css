@@ -5,16 +5,14 @@ body {
 /* Começo da tela 1 do cadastro */
 #cadastroTela1 {
     height: 100%;
-    display: flex;
     padding: 7%;
-    justify-content: center;
-    align-items: center;
 }
 .fundoForm {
     background-color: #E6DDBC;
     width: 50vw;
     height: 60vh;
     border-radius: 17px;
+    margin-left: 18.7%;
 }
 .fundoForm h1 {
     display: flex;
@@ -162,6 +160,8 @@ input {
     width: 33vw;
     height: 48vh;
     border-radius: 17px;
+    margin-left: 28.5%;
+    margin-top: 5%;
 }
 .fundoForm3 h3 {
     display: flex;
@@ -294,6 +294,7 @@ input {
     width: 29vw;
     height: 50vh;
     border-radius: 17px;
+    margin-left: 30%;
 }
 .fundoFormLogin h1 {
     display: flex;
@@ -311,6 +312,7 @@ input {
     display: flex;
     justify-content: space-around;
     margin-top: 7%;
+    margin-bottom: 0;
 }
 .botoesLogin a {
     text-decoration: none;

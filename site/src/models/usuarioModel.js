@@ -31,19 +31,23 @@ function cadastrar(nome, email, username, senha, biografia) {
     return database.executar(instrucao);
 }
 
-function curtir1(idUsuario, curtidosAnimais) {
+function curtir1(idUsuario, curtidosAnimais, fkDashboard) {
 
-    var instrucao = `
-    INSERT INTO Medida (idUsuario, curtidosAnimais) VALUES (${idUsuario}, '${curtidosAnimais}');
+    var instrucaoDash = `
+    INSERT INTO Dashboard (fkUsuario) VALUES (${idUsuario});
     `;
 
-    return database.executar(instrucao);
+    var instrucao = `
+    INSERT INTO Medida (curtidosAnimais, fkDashboard) VALUES (${curtidosAnimais}, ${fkDashboard});
+    `;
+
+    return database.executar(instrucaoDash), database.executar(instrucao);
 }
 
 function curtir2(idUsuario, curtidosPaisagem) {
 
     var instrucao = `
-    INSERT INTO Medida (idUsuario, curtidosPaisagem) VALUES (${idUsuario}, '${curtidosPaisagem}');
+    INSERT INTO Medida (idUsuario, curtidosPaisagem) VALUES (${idUsuario}, ${curtidosPaisagem});
     `;
 
     return database.executar(instrucao);
@@ -52,7 +56,7 @@ function curtir2(idUsuario, curtidosPaisagem) {
 function curtir3(idUsuario, curtidosFlores) {
 
     var instrucao = `
-    INSERT INTO Medida (idUsuario, curtidosFlores) VALUES (${idUsuario}, '${curtidosFlores}');
+    INSERT INTO Medida (idUsuario, curtidosFlores) VALUES (${idUsuario}, ${curtidosFlores});
     `;
 
     return database.executar(instrucao);

@@ -6,22 +6,18 @@ function buscarUltimasMedidas(idDashboard, limite_linhas) {
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         instrucaoSql = `select top ${limite_linhas}
-        favoritos as favs, 
-        curtidos as likes,  
-                        momento,
-                        FORMAT(momento, 'HH:mm:ss') as momento_grafico
-                    from medida
-                    where fkDashboard = ${idDashboard}
-                    order by id desc`;
+        sum(curtidosAnimais) as animais, 
+        sum(curtidosPaisagem) as paisagem, 
+        sum(curtidosFlores) as flores,  
+                     where fkDashboard = ${idDashboard}
+                    order by idDashboard desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select 
-        favoritos as favs, 
-        curtidos as likes,
-                        momento,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                    from medida
-                    where fkDashboard = ${idDashboard}
-                    order by id desc limit ${limite_linhas}`;
+        instrucaoSql = `select top ${limite_linhas}
+        sum(curtidosAnimais) as animais, 
+        sum(curtidosPaisagem) as paisagem, 
+        sum(curtidosFlores) as flores,  
+                     where fkDashboard = ${idDashboard}
+                    order by idDashboard desc`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -36,22 +32,20 @@ function buscarMedidasEmTempoReal(idDashboard) {
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select top 1
-        favoritos as favs, 
-        curtidos as likes,  
-                        CONVERT(varchar, momento, 108) as momento_grafico, 
-                        fkDashboard 
-                        from medida where fkDashboard = ${idDashboard} 
-                    order by id desc`;
+        instrucaoSql = `select top ${limite_linhas}
+        sum(curtidosAnimais) as animais, 
+        sum(curtidosPaisagem) as paisagem, 
+        sum(curtidosFlores) as flores,  
+                     where fkDashboard = ${idDashboard}
+                    order by idDashboard desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select 
-        favoritos as favs, 
-        curtidos as likes,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-                        fkDashboard 
-                        from medida where fkDashboard = ${idDashboard} 
-                    order by id desc limit 1`;
+        instrucaoSql = `select top ${limite_linhas}
+        sum(curtidosAnimais) as animais, 
+        sum(curtidosPaisagem) as paisagem, 
+        sum(curtidosFlores) as flores,  
+                     where fkDashboard = ${idDashboard}
+                    order by idDashboard desc limit 1`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

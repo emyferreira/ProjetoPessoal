@@ -33,14 +33,30 @@ CREATE TABLE Dashboard (
   FOREIGN KEY (fkUsuario) REFERENCES Usuário(idUsuario)
 )AUTO_INCREMENT = 10000;
 
-CREATE TABLE medida (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  favoritos INT,
-  curtidos INT,
-  momento DATETIME,
+CREATE TABLE MedidaAnimais (
+  curtidosAnimais INT PRIMARY KEY AUTO_INCREMENT,
   fkDashboard INT,
 	FOREIGN KEY (fkDashboard) REFERENCES Dashboard(idDashboard)
 );
+
+CREATE TABLE MedidaPaisagem (
+  curtidosPaisagem INT PRIMARY KEY AUTO_INCREMENT,
+  fkDashboard INT,
+	FOREIGN KEY (fkDashboard) REFERENCES Dashboard(idDashboard)
+);
+
+CREATE TABLE MedidaFlores (
+  curtidosFlores INT PRIMARY KEY AUTO_INCREMENT,
+  fkDashboard INT,
+	FOREIGN KEY (fkDashboard) REFERENCES Dashboard(idDashboard)
+);
+
+select * from MedidaAnimais;
+select * from MedidaPaisagenm;
+select * from MedidaFlores;
+select * from dashboard;
+select * from usuário;
+select * from nicho; 
 
 -- CREATE DATABASE aquatech;
 

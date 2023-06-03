@@ -17,7 +17,7 @@ function cadastrar() {
 
     if (nomeVar == "" || emailVar == "" || userVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
         cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        mensagem_erro.innerHTML = "(Erro: todos os campos estão em branco!)";
 
         finalizarAguardar();
         return false;
@@ -71,10 +71,6 @@ function sumirMensagem() {
     cardErro.style.display = "none"
 }
 
-function curtirBotao() {
-    curtir.style.backgroundColor = 'red';
-}
-
  // Gráfico
 
  const ctx = document.getElementById('myChart');
@@ -82,10 +78,10 @@ function curtirBotao() {
  new Chart(ctx, {
      type: 'bar',
      data: {
-         labels: ['Curtidos', 'Favoritados'],
+         labels: ['Animais', 'Paisagens', 'Flores'],
          datasets: [{
-             label: 'Registros',
-             data: [12, 19],
+             label: 'Categorias curtidas',
+             data: [],
              borderWidth: 1,
              backgroundColor: [
              'rgba(38, 0, 22, 1)'
@@ -135,12 +131,13 @@ function curtirBotao() {
     }
  }
 
-function curtir1(valor) {
+function curtir1() {
 
     var idUsuario = sessionStorage.ID_USUARIO;
-    var curtido = valor;
+    var curtido = (curtido +=1);
 
      console.log ("post curtido!");
+     msgPostCurtido.innerHTML = 'Post Curtido!';
 
      fetch("/usuarios/curtir1", {
         method: "POST",
@@ -149,7 +146,7 @@ function curtir1(valor) {
         },
         body: JSON.stringify({
             idServer: idUsuario,
-            curtirServer: curtido
+            curtirServer: curtido++
         })
      })
 
@@ -157,14 +154,14 @@ function curtir1(valor) {
 
 }
 
-function curtir2(valor) {
+function curtir2() {
 
     var idUsuario = sessionStorage.ID_USUARIO;
-    var curtido2 = valor;
+    var curtido2 = 1;
 
      console.log ("post curtido!");
 
-     fetch("/usuarios/curtir", {
+     fetch("/usuarios/curtir2", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -179,14 +176,14 @@ function curtir2(valor) {
 
 }
 
-function curtir3(valor) {
+function curtir3() {
 
     var idUsuario = sessionStorage.ID_USUARIO;
-    var curtido3 = valor;
+    var curtido3 = 1;
 
      console.log ("post curtido!");
 
-     fetch("/usuarios/curtir", {
+     fetch("/usuarios/curtir3", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
