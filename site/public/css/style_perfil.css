@@ -107,6 +107,7 @@ a {
 .nichoEscolhido {
     display: flex;
     flex-direction: row;
+    margin-left: 2%;
 }
 .nichoEscolhido h4 {
   margin-left: 1%;
@@ -283,6 +284,21 @@ a {
     color: white;
     border-radius: 40px;
     background-color: #260016;
+    margin-top: 1%;
+}
+
+.fotoPerfil {
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+select {
+    width: 8vw;
+    background-color: #E6DDBC;
+    border: 2px solid #260016;
+    border-radius: 5%;
 }
 
 .imgFavoritos {
@@ -292,9 +308,16 @@ a {
     border: 2px solid #260016;
 }
 
-.graficoUsuario {
-    width: 60vw;
-    height: 55vh;
+#myChart {
+    width: 55vw;
+    height: 50vh;
+}
+
+.dashboard {
+    margin-top: 5%;
+    margin-bottom: 5%;
+     display: flex;
+    justify-content: center;
 }
 
 .botaoVerMais {
