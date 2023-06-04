@@ -106,7 +106,7 @@ function sumirMensagem() {
          labels: ['Animais', 'Paisagens', 'Flores'],
          datasets: [{
              label: 'Categorias curtidas',
-             data: [],
+             data: [2, 5, 7],
              borderWidth: 1,
              backgroundColor: [
              'rgba(38, 0, 22, 1)'
