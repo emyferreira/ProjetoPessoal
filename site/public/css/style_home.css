@@ -257,7 +257,10 @@ header {
     border: 2px solid #260016;
     margin: 5%;
 }
-
+.caixaValor h5 {
+    font-size: larger;
+    margin-top: 10%;
+}
 .imgValores {
     width: 3vw;
     height: 9vh;
