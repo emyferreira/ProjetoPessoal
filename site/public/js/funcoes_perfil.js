@@ -7,7 +7,7 @@ function avancar() {
 
     if (nomeVar == "" && emailVar == "" && userVar == "" && senhaVar == "" && confirmacaoSenhaVar == "") {
         alert('Todos os campos estão em branco! Prrencha os campos.')
-    } 
+    }
     else if (nomeVar == "") {
         alert('O campo do nome não pode estar vazio!')
     }
@@ -29,10 +29,10 @@ function avancar() {
         alert('As senhas não são iguais, tente novamente!')
     }
     else {
-    cadastroTela1.style.display = 'none';
-        cadastroTela2.style.display = 'block';  
+        cadastroTela1.style.display = 'none';
+        cadastroTela2.style.display = 'block';
     }
-   
+
 }
 
 function cadastrar() {
@@ -48,8 +48,8 @@ function cadastrar() {
     var biografiaVar = biografia_input.value;
 
 
-        setInterval(sumirMensagem, 5000)
-    
+    setInterval(sumirMensagem, 5000)
+
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
@@ -96,33 +96,46 @@ function sumirMensagem() {
     cardErro.style.display = "none"
 }
 
- // Gráfico
+// Gráfico
 
- const ctx = document.getElementById('myChart');
 
- new Chart(ctx, {
-     type: 'bar',
-     data: {
-         labels: ['Animais', 'Paisagens', 'Flores'],
-         datasets: [{
-             label: 'Categorias curtidas',
-             data: [2, 5, 7],
-             borderWidth: 1,
-             backgroundColor: [
-             'rgba(38, 0, 22, 1)'
-             ],
-             borderColor: [
-             'rgba(38, 0, 22, 1)'
-             ],
-         }]
-     },
-     options: {
-         indexAxis: 'y',
-     }
+// function grafico() {
+//     fetch('medidas/ultimas', { cache: 'no-store' }).then(function (response) {
+//         if (response.ok) {
+//             response.json().then(function (resposta) {
+//                 console.log(`dados recebidos: ${JSON.stringfy(resposta)}`);
 
- });
+                const ctx = document.getElementById('myChart');
 
- function atualizarFavs() {
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['curtidos'],
+                        datasets: [{
+                            label: 'Fotos curtidas',
+                            data: [13],
+                            borderWidth: 1,
+                            backgroundColor: [
+                                'rgba(38, 0, 22, 1)'
+                            ],
+                            borderColor: [
+                                'rgba(38, 0, 22, 1)'
+                            ],
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                    }
+
+                    
+                    
+                })
+    //         });
+    //         }
+    //     })
+    // }
+    
+function atualizarFavs() {
     var select = nichos.value;
     var nichoAnimais = animaisOption.value;
     var nichoPaisagens = paisagensOption.value;
@@ -143,26 +156,28 @@ function sumirMensagem() {
         animaisFav.style.display = 'none';
         paisagemFav.style.display = 'none';
         nichoEscolhido.innerHTML = 'Flores';
-    } 
-    
- }
+    }
+
+}
 
 function curtir1() {
 
     var fkUsuario = sessionStorage.ID_USUARIO;
+    var curtido = 1;
 
-     console.log ("post curtido!");
-     msgPostCurtido.innerHTML = 'Post Curtido!';
+    console.log("post curtido!");
+    msgPostCurtido.innerHTML = 'Post Curtido!';
 
-     fetch("/usuarios/curtir1", {
+    fetch("/usuarios/curtir1", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
             fkUsuarioServer: fkUsuario,
+            curtidoServer: curtido,
         })
-     }).then(function (resposta) {
+    }).then(function (resposta) {
 
         console.log("resposta: ", resposta);
 
@@ -186,40 +201,85 @@ function curtir1() {
 
 function curtir2() {
 
-    var idUsuario = sessionStorage.ID_USUARIO;
+    var fkUsuario = sessionStorage.ID_USUARIO;
+    var curtido2 = 1;
 
-     console.log ("post curtido!");
+    console.log("post curtido!");
+    msgPostCurtido.innerHTML = 'Post Curtido!';
 
-     fetch("/usuarios/curtir2", {
+    fetch("/usuarios/curtir2", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            idServer: idUsuario,
+            fkUsuarioServer: fkUsuario,
+            curtido2Server: curtido2,
         })
-     })
-     
-     return false;
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            cardErro.style.display = "block";
+
+            mensagem_erro.innerHTML = "post curtidooo";
+
+            limparFormulario();
+            finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao curtir!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
+    return false;
 
 }
 
 function curtir3() {
 
-    var idUsuario = sessionStorage.ID_USUARIO;
+    var fkUsuario = sessionStorage.ID_USUARIO;
+    var curtido3 = 1;
 
-     console.log ("post curtido!");
+    console.log("post curtido!");
+    msgPostCurtido.innerHTML = 'Post Curtido!';
 
-     fetch("/usuarios/curtir3", {
+    fetch("/usuarios/curtir3", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            idServer: idUsuario,
+            fkUsuarioServer: fkUsuario,
+            curtido3Server: curtido3,
         })
-     })
-     
-     return false;
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            cardErro.style.display = "block";
+
+            mensagem_erro.innerHTML = "post curtidooo";
+
+            limparFormulario();
+            finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao curtir!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
+    return false;
 
 }
+
+var userUsuario = document.getElementById('user_usuario');
+var bio = document.getElementById('bio_usuario');
+
+userUsuario.innerHTML = sessionStorage.USER_USUARIO;
+bio.innerHTML = sessionStorage.BIO_USUARIO;
+

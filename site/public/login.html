@@ -11,6 +11,7 @@
     <script src="./js/funcoes.js"></script>
     <link rel="icon" href="./assets/icon/img_icone.ico">
     <link rel="stylesheet" href="./css/style_cadastro.css">
+    <script src="./js/sessao.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
                         <p>E-mail</p>
                         <input id="email_input" placeholder="Login">
                         <p>Senha</p>
-                        <input id="senha_input" placeholder="*******">
+                        <input type="password" id="senha_input" placeholder="*******">
                     </div>
                 </div>
                 <div class="botoesLogin">
@@ -85,7 +86,9 @@
 
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.USER_USUARIO = json.username;
+                    sessionStorage.BIO_USUARIO = json.biografia;
 
                     setTimeout(function () {
                         window.location = "./perfil.html";

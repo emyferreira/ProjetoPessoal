@@ -102,8 +102,9 @@ function cadastrar(req, res) {
 
 function curtir1(req, res) {
     var fkUsuario = req.body.fkUsuarioServer
+    var curtido = req.body.curtidoServer
 
-    usuarioModel.curtir1(fkUsuario)
+    usuarioModel.curtir1(fkUsuario, curtido)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -121,10 +122,10 @@ function curtir1(req, res) {
 }
 
 function curtir2(req, res) {
-    var idUsuario = req.body.idServer
-    var curtidos2 = req.body.curtirServer;
+    var fkUsuario = req.body.fkUsuarioServer
+    var curtido2 = req.body.curtido2Server
 
-    usuarioModel.curtir2(idUsuario, curtidos2)
+    usuarioModel.curtir2(fkUsuario, curtido2)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -142,10 +143,10 @@ function curtir2(req, res) {
 }
 
 function curtir3(req, res) {
-    var idUsuario = req.body.idServer
-    var curtidos3 = req.body.curtirServer;
+    var fkUsuario = req.body.fkUsuarioServer
+    var curtido3 = req.body.curtido3Server
 
-    usuarioModel.curtir3(idUsuario, curtidos3)
+    usuarioModel.curtir3(fkUsuario, curtido3)
             .then(
                 function (resultado) {
                     res.json(resultado);
